@@ -28,9 +28,9 @@ const experiences: ExperienceItem[] = [
   {
     title: 'AI Engineer',
     company: 'Innoventix Solutions',
-    employmentType: 'Full Time',
+    employmentType: 'FullTime',
     period: 'Nov 2025 - Present',
-    location: 'Remote',
+    location: 'On-Site',
     companyDescription: 'Building production AI systems focused on identity verification, speech translation, and deployable inference pipelines.',
     logoInitials: 'IS',
     description: [

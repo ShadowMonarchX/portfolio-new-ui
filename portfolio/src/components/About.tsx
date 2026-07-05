@@ -5,14 +5,10 @@ import SectionTitle from './SectionTitle';
 const About: React.FC = () => {
   const skills = [
     { name: 'Python', level: 90, color: '#4B8BBE' },
-    { name: 'Machine Learning', level: 85, color: '#38B2AC' },
+    { name: 'ML/DL Learning', level: 85, color: '#38B2AC' },
     { name: 'PyTorch', level: 80, color: '#EE4C2C' },
-    { name: 'Model Evaluation/Experimentation', level: 80, color: '#F6AD55' },
     { name: 'SQL', level: 75, color: '#F29111' },
-    { name: 'LangChain/LangGraph', level: 75, color: '#61DAFB' },
-    { name: 'Transformers/LoRA', level: 75, color: '#FF6B6B' },
     { name: 'MLOps (Monitoring)', level: 70, color: '#805AD5' },
-    { name: 'Docker', level: 70, color: '#2496ED' },
     { name: 'Cloud (AWS/GCP)', level: 70, color: '#4299E1' },
     { name: 'Vector DBs (Pinecone/FAISS)', level: 60, color: '#48BB78' },
   ];

@@ -16,35 +16,35 @@ const projects: Project[] = [
   {
     title: "Dynamic AI Customer Support API",
     description: "Production-ready AI customer support backend built with FastAPI. It combines retrieval, reranking, confidence validation, JWT auth with RBAC, Redis-backed caching, streaming responses, and an offline ingestion worker with persisted vector artifacts.",
-    technologies: ["Python", "FastAPI", "RAG", "Redis", "Prometheus", "Docker", "Kubernetes", "Celery"],
+    technologies: ["Python", "FastAPI", "RAG", "Docker", "LLMs"],
     image: "images/1.png",
     github: "https://github.com/ShadowMonarchX/dynamic-ai-customer-support"
   },
   {
     title: "Gemma Local Chatbot",
     description: "Local-first AI chatbot with runtime model switching between Gemma variants and hardware-aware inference routing for Apple Silicon, Intel CPU, and CUDA. Streams responses over SSE and includes a React admin dashboard for runtime metrics, along with prompt-injection detection and rate limiting.",
-    technologies: ["Python", "Gemma", "mlx-lm", "llama-cpp-python", "FastAPI", "React", "TypeScript", "SSE"],
+    technologies: ["Python", "Gemma-4", "FastAPI", "LLMs", "Fine-Tune Models"],
     image: "images/2.png",
     github: "https://github.com/ShadowMonarchX/gemma-chatbot"
   },
   {
     title: "Electric RAG Chatbot",
     description: "Retrieval-Augmented Generation system with multi-format document ingestion, OCR, intelligent chunking, and multi-LLM orchestration. Uses Supabase as a vector database, TF-IDF plus vector-similarity reranking, and a React + Tailwind frontend for chat and document upload.",
-    technologies: ["Python", "FastAPI", "RAG", "Supabase", "Sentence Transformers", "PyMuPDF", "React", "Tailwind CSS"],
+    technologies: ["Python", "FastAPI", "RAG", "Sentence Transformers", "LLMs", "Promt Engineering"],
     image: "images/3.png",
     github: "https://github.com/ShadowMonarchX/RAG-Enhanced-Chatbot"
   },
   {
     title: "LLM Fine-Tuning Toolkit",
     description: "Hands-on repository for fine-tuning open-source LLMs such as Mistral and LLaMA 2 using QLoRA and PEFT for memory-efficient training. Includes Jupyter notebooks plus end-to-end scripts for dataset prep, training configuration, evaluation, and deployment.",
-    technologies: ["Python", "QLoRA", "PEFT", "Mistral", "LLaMA 2", "Transformers", "Jupyter"],
+    technologies: ["Python", "QLoRA", "PEFT", "Transformers", "Jupyter"],
     image: "images/4.png",
     github: "https://github.com/ShadowMonarchX/Finetuning-LLM-main"
   },
   {
     title: "Django React Auth API",
     description: "Full-stack authentication system with a Django REST Framework backend and React frontend. Uses JWT access and refresh tokens for registration, login, logout, and protected routes, with CORS configured for local development.",
-    technologies: ["Django", "Django REST Framework", "djangorestframework-simplejwt", "React", "Axios"],
+    technologies: ["Django", "Django REST Framework", "djangorestframework-simplejwt", "React", "JWT"],
     image: "images/5.png",
     github: "https://github.com/ShadowMonarchX/Django_react_auth_api"
   },

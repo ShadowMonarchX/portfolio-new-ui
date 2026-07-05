@@ -12,10 +12,10 @@ const Contact = lazy(() => import('./components/Contact'));
 
 const App: React.FC = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="theme-page relative min-h-screen">
       <a
         href="#hero"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900 focus:shadow-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-[var(--theme-surface)] focus:px-4 focus:py-2 focus:text-[var(--theme-text)] focus:shadow-lg focus:ring-2 focus:ring-[var(--theme-accent)]"
       >
         Skip to content
       </a>

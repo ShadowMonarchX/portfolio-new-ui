@@ -5,12 +5,66 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --theme-bg: #f8fafc;
+    --theme-surface: rgba(255, 255, 255, 0.82);
+    --theme-surface-solid: #ffffff;
+    --theme-surface-strong: #f1f5f9;
+    --theme-border: rgba(15, 23, 42, 0.12);
+    --theme-text: #0f172a;
+    --theme-text-muted: #475569;
+    --theme-heading: #0f172a;
+    --theme-link: #0f766e;
+    --theme-link-hover: #115e59;
+    --theme-accent: #0f766e;
+    --theme-accent-contrast: #ffffff;
+    --theme-accent-soft: rgba(20, 184, 166, 0.12);
+    --theme-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    --theme-input-bg: rgba(255, 255, 255, 0.9);
+    --theme-chip-bg: rgba(15, 23, 42, 0.06);
+    --theme-chip-text: #334155;
+    --theme-glow: rgba(20, 184, 166, 0.14);
+    --primary-color-rgb: 20, 184, 166;
+    color-scheme: light;
+  }
+
+  :root[data-theme='dark'] {
+    --theme-bg: #0b1220;
+    --theme-surface: rgba(15, 23, 42, 0.82);
+    --theme-surface-solid: #111827;
+    --theme-surface-strong: #162033;
+    --theme-border: rgba(148, 163, 184, 0.16);
+    --theme-text: #e2e8f0;
+    --theme-text-muted: #94a3b8;
+    --theme-heading: #f8fafc;
+    --theme-link: #5eead4;
+    --theme-link-hover: #99f6e4;
+    --theme-accent: #5eead4;
+    --theme-accent-contrast: #062b26;
+    --theme-accent-soft: rgba(94, 234, 212, 0.14);
+    --theme-shadow: 0 24px 60px rgba(2, 6, 23, 0.4);
+    --theme-input-bg: rgba(15, 23, 42, 0.9);
+    --theme-chip-bg: rgba(148, 163, 184, 0.14);
+    --theme-chip-text: #cbd5e1;
+    --theme-glow: rgba(94, 234, 212, 0.12);
+    --primary-color-rgb: 94, 234, 212;
+    color-scheme: dark;
+  }
+
   html {
     scroll-behavior: smooth;
+    background: var(--theme-bg);
   }
 
   body {
-    @apply text-gray-800 antialiased;
+    @apply antialiased;
+    background: var(--theme-bg);
+    color: var(--theme-text);
+    transition: background-color 250ms ease, color 250ms ease;
+  }
+
+  body * {
+    transition: background-color 250ms ease, border-color 250ms ease, color 250ms ease, box-shadow 250ms ease, fill 250ms ease, stroke 250ms ease;
   }
 }
 
@@ -23,5 +77,103 @@
 @layer utilities {
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800;
+  }
+
+  .theme-page {
+    background: var(--theme-bg);
+    color: var(--theme-text);
+  }
+
+  .theme-surface {
+    background: var(--theme-surface);
+    border: 1px solid var(--theme-border);
+    box-shadow: var(--theme-shadow);
+    backdrop-filter: blur(12px);
+  }
+
+  .theme-surface-solid {
+    background: var(--theme-surface-solid);
+  }
+
+  .theme-text {
+    color: var(--theme-text);
+  }
+
+  .theme-text-muted {
+    color: var(--theme-text-muted);
+  }
+
+  .theme-heading {
+    color: var(--theme-heading);
+  }
+
+  .theme-border {
+    border-color: var(--theme-border);
+  }
+
+  .theme-input {
+    background: var(--theme-input-bg);
+    border: 1px solid var(--theme-border);
+    color: var(--theme-text);
+  }
+
+  .theme-input::placeholder {
+    color: var(--theme-text-muted);
+  }
+
+  .theme-chip {
+    background: var(--theme-chip-bg);
+    color: var(--theme-chip-text);
+    border: 1px solid var(--theme-border);
+  }
+
+  .theme-link {
+    color: var(--theme-link);
+  }
+
+  .theme-link:hover {
+    color: var(--theme-link-hover);
+  }
+
+  .theme-button-primary {
+    background: var(--theme-accent);
+    color: var(--theme-accent-contrast);
+  }
+
+  .theme-button-secondary {
+    background: transparent;
+    color: var(--theme-accent);
+    border: 1px solid var(--theme-border);
+  }
+
+  .theme-button-secondary:hover {
+    background: var(--theme-accent-soft);
+  }
+
+  .theme-toggle {
+    color: var(--theme-text-muted);
+  }
+
+  .theme-toggle:hover,
+  .theme-toggle:focus-visible {
+    color: var(--theme-text);
+  }
+
+  .theme-focus-ring:focus-visible {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 2px;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    background: var(--theme-accent);
+    color: var(--theme-accent-contrast);
+  }
+
+  .btn-primary:hover {
+    filter: brightness(0.96);
   }
 }

@@ -27,6 +27,17 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('portfolio-theme') || 'light';
+          var root = document.documentElement;
+          root.dataset.theme = theme === 'dark' ? 'dark' : 'light';
+          root.style.colorScheme = root.dataset.theme;
+          document.body && (document.body.dataset.theme = root.dataset.theme);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">

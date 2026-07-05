@@ -17,7 +17,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, eyebrow = title }) =
       className="text-center mb-16"
     >
       <p className="text-sm uppercase tracking-[0.25em] text-primary-color font-semibold mb-3">{eyebrow}</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold theme-heading mb-4">{title}</h2>
       <div className="w-20 h-1 bg-primary-color mx-auto" />
     </motion.div>
   );

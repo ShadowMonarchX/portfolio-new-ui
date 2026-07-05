@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-2xl md:text-3xl text-gray-600 mb-8"
+              className="text-2xl md:text-3xl theme-text-muted mb-8"
             >
               AI Engineer
             </motion.h2>
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0"
+              className="theme-text-muted mb-8 max-w-lg mx-auto md:mx-0"
             >
               I live in that sweet spot where models, infra, and product meet. I&apos;ve built everything from RAG systems that actually work (not just sound fancy in decks) to real-time AI pipelines running on cloud infra that doesn&apos;t randomly catch fire. I think like a researcher, build like an engineer, and ship like someone who&apos;s on call for it.
             </motion.p>
@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact"
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
+                className="px-6 py-3 theme-button-primary rounded-lg font-medium hover:shadow-lg transition-all duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
               >
                 Get In Touch
               </motion.a>
@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 href="#projects"
-                className="px-6 py-3 bg-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 border border-blue-500/20 rounded-lg font-medium hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-blue-800/100 transition-colors duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
+                className="px-6 py-3 theme-button-secondary rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -134,7 +134,8 @@ const Hero: React.FC = () => {
                 href="https://linkedin.com/in/jenish-shekhada-ba4681314"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-[#0077B5]/10 text-[#0077B5] border border-[#0077B5]/20 rounded-lg font-medium hover:bg-[#0077B5]/20 transition-colors duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
+                className="px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 min-h-[51px] w-full sm:w-[237px] justify-center"
+                style={{ background: 'rgba(0, 119, 181, 0.10)', color: '#0077B5', border: '1px solid rgba(0, 119, 181, 0.20)' }}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -153,7 +154,7 @@ const Hero: React.FC = () => {
             <motion.div
               animate={reduceMotion ? { y: 0 } : { y: [0, -5, 0] }}
               transition={reduceMotion ? { duration: 0 } : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              className="glass-effect rounded-xl p-5 bg-white/80 backdrop-blur-sm border border-white/10"
+              className="theme-surface rounded-xl p-5"
             >
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -163,8 +164,8 @@ const Hero: React.FC = () => {
                         {card.icon}
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-800">{card.title}</h3>
-                        <p className="text-sm text-gray-500">{card.subtitle}</p>
+                        <h3 className="font-medium theme-heading">{card.title}</h3>
+                        <p className="text-sm theme-text-muted">{card.subtitle}</p>
                       </div>
                     </div>
                   ))}

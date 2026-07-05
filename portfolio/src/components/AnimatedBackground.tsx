@@ -55,9 +55,9 @@ const AnimatedBackground: React.FC = () => {
   );
 
   return (
-    <div aria-hidden="true" className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 pointer-events-none">
+    <div aria-hidden="true" className="fixed inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom right, var(--theme-bg), var(--theme-surface-strong))' }}>
       {/* Base grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(100,116,139,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,116,139,0.10)_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Animated neon lines */}
       {gridLines.map((line) => (
@@ -65,8 +65,8 @@ const AnimatedBackground: React.FC = () => {
           key={line.id}
           className={`absolute ${line.isHorizontal ? 'h-[1px] w-full' : 'w-[1px] h-full'
             } ${line.color === 'blue'
-              ? 'bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]'
-              : 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.5)]'
+              ? 'bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.35)]'
+              : 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.35)]'
             }`}
           initial={{
             opacity: 0,

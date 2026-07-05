@@ -30,12 +30,12 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="glass-effect rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Who I Am</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="glass-effect theme-surface rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-semibold theme-heading mb-4">Who I Am</h3>
+              <p className="theme-text-muted mb-4">
                 I live in that sweet spot where models, infra, and product meet. I've built everything from RAG systems that actually work (not just sound fancy in decks) to training and evaluation pipelines that hold up outside a notebook, to deployment stacks running on cloud infra that doesn't randomly catch fire. I think like a researcher, build like an engineer, and ship like someone who's on call for it.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="theme-text-muted leading-relaxed">
                 I love owning problems end-to-end — experimenting with architectures, wiring up the pipelines that train and serve them, and keeping the whole thing observable and reproducible in production. Whether it's chasing a research idea to see if it actually generalizes or hardening a pipeline so it survives 3am traffic spikes, I'm obsessed with turning wild ideas into systems that hold up under real load.
                 <br />
                 <br />
@@ -45,24 +45,24 @@ const About: React.FC = () => {
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass-effect rounded-xl p-4 shadow-lg"
+                className="glass-effect theme-surface rounded-xl p-4 shadow-lg"
               >
                 <div className="text-3xl font-bold text-primary-color mb-2">1+</div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="theme-text-muted">Years Experience</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass-effect rounded-xl p-4 shadow-lg"
+                className="glass-effect theme-surface rounded-xl p-4 shadow-lg"
               >
                 <div className="text-3xl font-bold text-primary-color mb-2">3+</div>
-                <div className="text-gray-600">Production Deployments</div>
+                <div className="theme-text-muted">Production Deployments</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass-effect rounded-xl p-4 shadow-lg"
+                className="glass-effect theme-surface rounded-xl p-4 shadow-lg"
               >
                 <div className="text-3xl font-bold text-primary-color mb-2">6+</div>
-                <div className="text-gray-600">Personal Projects</div>
+                <div className="theme-text-muted">Personal Projects</div>
               </motion.div>
             </div>
           </motion.div>
@@ -74,16 +74,16 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="glass-effect rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Skills</h3>
+            <div className="glass-effect theme-surface rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-semibold theme-heading mb-6">Skills</h3>
               <div className="space-y-4">
                 {skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-gray-500">{skill.level}%</span>
+                      <span className="theme-text font-medium">{skill.name}</span>
+                      <span className="theme-text-muted">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-[var(--theme-surface-strong)] rounded-full h-2">
                       <div
                         className="h-2 rounded-full"
                         style={{ width: `${skill.level}%`, backgroundColor: skill.color }}
@@ -94,8 +94,8 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="glass-effect rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div className="glass-effect theme-surface rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-semibold theme-heading mb-4">Education</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-full bg-primary-color/10 flex items-center justify-center flex-shrink-0">
@@ -105,9 +105,9 @@ const About: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Bachelor of Technology</h4>
-                    <p className="text-gray-600">Computer Engineering</p>
-                    <p className="text-sm text-gray-500">2022 - 2026</p>
+                    <h4 className="font-semibold theme-heading">Bachelor of Technology</h4>
+                    <p className="theme-text-muted">Computer Engineering</p>
+                    <p className="text-sm theme-text-muted">2022 - 2026</p>
                   </div>
                 </div>
               </div>

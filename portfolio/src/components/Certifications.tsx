@@ -107,7 +107,7 @@ const Certifications: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="glass-effect theme-surface rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
               <a
                 href={cert.link}
@@ -121,9 +121,9 @@ const Certifications: React.FC = () => {
                     {cert.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-1">{cert.name}</h3>
-                    <p className="text-gray-600">{cert.issuer}</p>
-                    <p className="text-sm text-gray-500 mt-1">{cert.date}</p>
+                    <h3 className="text-xl font-semibold theme-heading mb-1">{cert.name}</h3>
+                    <p className="theme-text-muted">{cert.issuer}</p>
+                    <p className="text-sm theme-text-muted mt-1">{cert.date}</p>
                   </div>
                 </div>
               </a>
